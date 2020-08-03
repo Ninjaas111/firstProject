@@ -1,0 +1,72 @@
+main {
+    background-image: url(C:Tymur/web/project1/images/code_hero.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+}
+
+
+
+header {
+    background-color: rgba(38, 27, 27, 0.9);
+   
+}
+header p {
+    color: white;
+}
+p span{
+    color: rgb(40,200,229);
+    
+}
+
+header p {
+    float: right;
+    text-align: right;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+h1 {
+    margin-bottom: 0;
+}
+main p {
+    margin-top: 5px;
+}
+.info {
+    width: 400px ;
+}
+.info {
+    background-color: rgba(249, 249, 249, 0.6);
+    text-align: center;
+    border-radius: 10px;
+
+}
+input {
+    border: solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: thick line;
+    border-right: none;
+    background: transparent;
+    text-align: center;
+    margin-bottom: 5px;
+}
+button {
+    width: 95%;
+    height: 2.5em ;
+    background-color:rgb(40,200,229);
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+    color:white;
+    
+}
+button img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+.coding {
+    float: right;
+}
