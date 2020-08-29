@@ -1,12 +1,38 @@
 main {
     background-image: url(C:Tymur/web/project1/images/code_hero.jpg);
     background-repeat: no-repeat;
-    width: 100%;
-    display: flex;
+    background-size: cover;
+    margin: 0;
 }
 
-
-
+.first {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+    
+}
+.second {
+    background-image:  url(C:Tymur/web/project1/images/phone.png), url(C:Tymur/web/project1/images/featuring.jpg);
+    background-repeat: no-repeat;
+    background-size: 250px,cover ;
+    background-position: center;
+    
+    
+}
+.figure{ 
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+}
+.figure figure {
+    text-align: center;
+    color: white;
+}
+.second p {
+    text-align: center;
+}
 header {
     background-color: rgba(38, 27, 27, 0.9);
    
@@ -18,7 +44,13 @@ p span{
     color: rgb(40,200,229);
     
 }
-
+#phone {
+    text-align: center;
+}
+#phone img {
+    width = 200px;
+    height = 200px;
+}
 header p {
     float: right;
     text-align: right;
@@ -67,6 +99,60 @@ button img {
     height: 20px;
     align-items: center;
 }
-.coding {
-    float: right;
+.coding, .data-analytics {
+    text-align: right; 
+    margin: 100px;
+}
+.learn {
+    color:white;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+div p, .data-analytics h2 {
+    color: white;
+}
+.info p{
+    color: black;
+}
+.info {
+    margin: 50px;
+
+}
+.coding h2 {
+    color: rgb(40,200,229);
+}
+.second img{
+    width: 100px;
+    height: 100px;
+}
+.second h1 {
+    font-size: 40px;
+    color:white;
+    text-align: center;
+    text-decoration: underline;
+    margin-top:0;
+    padding: 50px;
+}
+.about {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-image: url(C:Tymur/web/project1/images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about h1{
+    color:rgb(40,200,229);
+    margin:0;
+    padding: 50px;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.about p {
+    color:white;
+    padding:20px;
+}
+#back {
+    padding: 0;
+    margin: 0;
 }
