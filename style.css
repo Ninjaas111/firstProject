@@ -20,6 +20,14 @@ main {
     
     
 }
+.questions {
+    background-image: url(C:Users/Family/Documents/Github/firstProject/images/faq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about p, .questions h1 {
+    margin: 0;
+}
 .figure{ 
     display: grid;
     grid-template-columns: repeat(2,1fr) ;
@@ -48,8 +56,8 @@ p span{
     text-align: center;
 }
 #phone img {
-    width = 200px;
-    height = 200px;
+    width : 200px;
+    height : 200px;
 }
 header p {
     float: right;
@@ -156,3 +164,29 @@ div p, .data-analytics h2 {
     padding: 0;
     margin: 0;
 }
+.questions h1 { 
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-left: 100px;
+}
+.questions ul {
+    padding-left: 100px;
+    margin-bottom: 0;
+}
+.unnested {
+    list-style-image: url(C:Users/Family/Documents/Github/firstProject/images/chev-blue.svg);
+    padding-bottom: 10px;
+}
+#six {
+    list-style-image: url(C:Users/Family/Documents/Github/firstProject/images/chev-black.svg);
+}
+
+footer {
+    background-color: rgb(40,200,229) ;
+}
+footer div {
+    float: right;
+    text-align: right;
+    
+}
+
