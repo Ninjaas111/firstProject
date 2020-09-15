@@ -1,5 +1,5 @@
 main {
-    background-image: url(C:Tymur/web/project1/images/code_hero.jpg);
+    background-image: url(images/code_hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -13,7 +13,7 @@ main {
     
 }
 .second {
-    background-image:  url(C:Tymur/web/project1/images/phone.png), url(C:Tymur/web/project1/images/featuring.jpg);
+    background-image:  url(images/phone.png), url(images/featuring.jpg);
     background-repeat: no-repeat;
     background-size: 250px,cover ;
     background-position: center;
@@ -21,7 +21,7 @@ main {
     
 }
 .questions {
-    background-image: url(C:Users/Family/Documents/Github/firstProject/images/faq.jpg);
+    background-image: url(images/faq.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -145,7 +145,7 @@ div p, .data-analytics h2 {
     padding: 0;
     margin: 0;
     text-align: center;
-    background-image: url(C:Tymur/web/project1/images/about.jpg);
+    background-image: url(images/about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -174,11 +174,11 @@ div p, .data-analytics h2 {
     margin-bottom: 0;
 }
 .unnested {
-    list-style-image: url(C:Users/Family/Documents/Github/firstProject/images/chev-blue.svg);
+    list-style-image: url(images/chev-blue.svg);
     padding-bottom: 10px;
 }
 #six {
-    list-style-image: url(C:Users/Family/Documents/Github/firstProject/images/chev-black.svg);
+    list-style-image: url(images/chev-black.svg);
 }
 
 footer {
