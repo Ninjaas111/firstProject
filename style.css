@@ -45,8 +45,9 @@ header {
     background-color: rgba(38, 27, 27, 0.9);
    
 }
-header p {
-    color: white;
+
+header img {
+    padding: 10px 10px 10px 100px;
 }
 p span{
     color: rgb(40,200,229);
@@ -62,8 +63,9 @@ p span{
 header p {
     float: right;
     text-align: right;
-    margin-right: 100px;
-    margin-top: 30px;
+    margin: 0;
+    color: white;
+    padding: 30px 100px 30px 30px;
 }
 h1 {
     margin-bottom: 0;
@@ -71,14 +73,21 @@ h1 {
 main p {
     margin-top: 5px;
 }
-.info {
-    width: 400px ;
+.learn h1 {
+    font-size: 40px;
+}
+.learn p {
+    font-size: 20px;
 }
 .info {
     background-color: rgba(249, 249, 249, 0.6);
     text-align: center;
     border-radius: 10px;
-
+    width: 400px ;
+    height: 170px;
+}
+.info h1 {
+    margin-top: 5px;
 }
 input {
     border: solid;
@@ -152,16 +161,17 @@ div p, .data-analytics h2 {
 .about h1{
     color:rgb(40,200,229);
     margin:0;
-    padding: 50px;
+    padding: 50px 50px 20px 50px;
     font-size: 40px;
     text-decoration: underline;
 }
 .about p {
     color:white;
-    padding:20px;
+    padding: 0px 20px 50px 20px;
 }
 #back {
-    padding: 0;
+    color: white;
+    padding-bottom: 20px;
     margin: 0;
 }
 .questions h1 { 
