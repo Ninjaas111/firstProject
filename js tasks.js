@@ -120,3 +120,24 @@ let element;
     function sortByLength(arr) {
         return arr.sort((a,b) => a.length - b.length );
     }
+
+    //9 isAvgWhole number?
+   
+        
+    let arr=[9,2,2,5];
+    let sum=0;
+    let average;
+    function isAvgWhole (arr) {
+        for (let i = 0; i < arr.length; i++){
+                sum +=arr[i];
+        }
+            average = sum / arr.length;
+    
+        if (average % 1  == 0) {
+            return true;
+        } else {
+            return  false;
+        }
+    }
+    let result = isAvgWhole(arr);
+    alert(result);
