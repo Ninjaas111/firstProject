@@ -193,10 +193,14 @@ div p, .data-analytics h2 {
 
 footer {
     background-color: rgb(40,200,229) ;
+    height: 200px;
 }
-footer div {
+footer p {
     float: right;
     text-align: right;
-    
+    padding: 30px 50px 20px 20px;
+}
+footer img {
+    padding: 60px;
 }
 
