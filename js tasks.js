@@ -141,3 +141,19 @@ let element;
     }
     let result = isAvgWhole(arr);
     alert(result);
+
+    // https://edabit.com/challenge/BFnsRqe8PFvEwcRNt
+    function makePair(num1, num2) {
+        let arr=[];
+        arr.push(num1);
+        arr.push(num2);
+        return arr;
+    }
+    // https://edabit.com/challenge/654ABGmNS5GqscE8C
+
+    function getVoteCount(votes) {
+		let result=votes.upvotes-votes.downvotes;
+	return result;
+}
+
+
