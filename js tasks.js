@@ -156,4 +156,30 @@ let element;
 	return result;
 }
 
+// https://edabit.com/challenge/NKknKNfeaJxLDfJuZ
+function monthName(num) {
+	let b = [0, "January","February", "March", "April", "May", "June", "July",
+					 "August", "September", "October", "November", "December"]
+	return result = b[num];
+}
 
+//  
+function minMax(arr) {
+	let a= Math.min(...arr);
+	let b= Math.max(...arr);
+	return [a, b];
+ 
+}
+
+//https://edabit.com/challenge/7ysTEDruHz2prcJQ9
+function tuckIn(arr1, arr2) {
+	let arr3=[];
+	let element;
+	arr3[0]=arr1[0];
+	for (let i=0; i<arr2.length; i++){
+		element=arr2[i];
+		arr3.push(element);
+	}
+	arr3.push(arr1[1]);
+	return arr3;
+}
