@@ -183,3 +183,19 @@ function tuckIn(arr1, arr2) {
 	arr3.push(arr1[1]);
 	return arr3;
 }
+//https://edabit.com/challenge/yiMSg6cNNCeJDQo3b
+
+function sumOfEvens(arr) {
+    let element; 
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) { 
+      for (let j = 0; j<arr[i].length; j++){
+          element = arr[i][j];
+          if (element % 2 === 0) {
+              sum += element;    
+          }
+      }
+      
+  }
+return sum;
+}
