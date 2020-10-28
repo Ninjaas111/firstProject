@@ -221,3 +221,76 @@ function countVowels(str) {
     return count;
 
 }
+
+
+//https://edabit.com/challenge/5xrKJPsXLG3czFpuq
+
+
+function isObject(value) {
+    if (typeof value === "object" && value !== null) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//https://edabit.com/challenge/PWqkt9HiLcJSr6QEY
+function numbersSum(arr) {
+    let sum = 1;
+    for (let i = 0; i < arr.length; i++) {
+        let element = arr[i];
+        if (typeof element === "number") {
+            sum *= element;
+        }
+    }
+    return sum;
+}
+
+let result = numbersSum([1, 2, "13", 4, "645"]);
+console.log(result);
+
+//https://edabit.com/challenge/NH7uN8JRgPz23GSNq
+
+function parityAnalysis(num) {
+    let str = String(num);
+    let check = 0;
+    for (let i = 0; i < str.length; i++) {
+        let element = +str[i];
+        check += element;
+    }
+
+    if (num % 2 == 0 && check % 2 == 0 || num % 2 == 1 && check % 2 == 1) {
+        return true;
+
+    } else {
+        return false;
+    }
+}
+
+//https://edabit.com/challenge/Rd7rkibLqAcBEx7xP   ne poly4ilos' polnostyu
+function add(numberOne, numberTwo) {
+	if(typeof +numberOne === "number" && typeof +numberTwo === "number"){
+		let b = +numberOne + +numberTwo;
+		let c = String(b);
+		return c;
+	}else {
+		let str = "Invalid Operation";
+	return str;
+	}
+}
+
+https://edabit.com/challenge/6nWnXZZBdetZSLbTE    ne poly4ilos' polnostyu
+
+function lettersOnly(str) {
+	let lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ""];
+		for (let i = 0; i<str.length; i++){
+			let element = str[i];
+			for (let j=0; j<lower.length; j++){
+				let low=lower[j];
+				if (element == low){
+					return true;
+				}else {
+					return false;
+				}
+			}
+		}
+}
