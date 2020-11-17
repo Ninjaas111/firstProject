@@ -294,3 +294,20 @@ function lettersOnly(str) {
 			}
 		}
 }
+
+//https://edabit.com/challenge/esP7cxXgx8ygiTq9f  ne poly4ilos' polnostyu
+let count = 0;
+let letter;
+let letter2;
+for (let i = 0; i < str1.length; i++){
+    letter = str1[i];
+    for (let j=0; j < str2.length; j++){
+        letter2 = str2[j];
+        if (letter == letter2 ){
+            count++;
+                            break;
+        }
+    }
+
+}
+return count;
