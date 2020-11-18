@@ -311,3 +311,11 @@ for (let i = 0; i < str1.length; i++){
 
 }
 return count;
+
+//https://edabit.com/challenge/Ra85gzkCTtXrNyCag
+
+function add_suffix(suffix) {
+	return function(word){
+		return word + suffix;
+	}
+}
