@@ -319,3 +319,12 @@ function add_suffix(suffix) {
 		return word + suffix;
 	}
 }
+
+
+//https://edabit.com/challenge/xtv5ZT7xDsHyrshTq
+
+function add(n) {
+	return function(x) {
+		return n + x;
+	}
+}
