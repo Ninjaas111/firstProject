@@ -328,3 +328,17 @@ function add(n) {
 		return n + x;
 	}
 }
+//https://edabit.com/challenge/AP4hnF97anRc2mAZ6
+function keysAndValues(obj) {
+	let arr3 = []; 
+       let arr1 = Object.keys(obj);
+       let arr2 = Object.values(obj);
+			arr3[0] = arr1;
+        arr3[1] = arr2;
+	return arr3;
+}
+//https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
+function toArray(obj) {
+	let arr3 = Object.entries(obj);
+	return arr3;
+}
