@@ -221,6 +221,20 @@ function countVowels(str) {
     return count;
 
 }
+//https://edabit.com/challenge/YT2kXSMEtACPPk35R
+
+function intWithinBounds(n, lower, upper) {
+	if ( n % 1 === 0) {
+		if ( lower <= n && n < upper ){
+			return true;
+		}else {
+			return false;
+		}
+	}else {
+		return false;
+	}
+//	return n % 1 === 0 && lower <= n < upper; 
+}
 
 //https://edabit.com/challenge/PTvYKkvf7oytHmJFm
 function reverseCase(str) {
@@ -297,18 +311,27 @@ function add(numberOne, numberTwo) {
 https://edabit.com/challenge/6nWnXZZBdetZSLbTE    ne poly4ilos' polnostyu
 
 function lettersOnly(str) {
-	let lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ""];
-		for (let i = 0; i<str.length; i++){
+	if (str === ""){
+		return false;
+	}
+	let lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
+	for (let i = 0; i<str.length; i++){
 			let element = str[i];
+			let isLowerCase = false;
+			
 			for (let j=0; j<lower.length; j++){
 				let low=lower[j];
-				if (element == low){
-					return true;
-				}else {
-					return false;
+				if (element === low){
+					isLowerCase = true;
+					break;
 				}
+				
+			}
+			if (!isLowerCase) {
+				return false;
 			}
 		}
+	return true;
 }
 
 //https://edabit.com/challenge/esP7cxXgx8ygiTq9f  ne poly4ilos' polnostyu
