@@ -222,6 +222,22 @@ function countVowels(str) {
 
 }
 
+//https://edabit.com/challenge/PTvYKkvf7oytHmJFm
+function reverseCase(str) {
+	let result = [];
+	for (let i=0; i<str.length; i++){
+		if (str[i].toLowerCase() === str[i] ) {
+			let b = str[i].toUpperCase();
+			result.push(b);
+		} else {
+			let c = str[i].toLowerCase();
+			result.push(c);
+		}
+	}
+	let result2 = result.join("");
+	return result2;
+}
+
 
 //https://edabit.com/challenge/5xrKJPsXLG3czFpuq
 
@@ -337,7 +353,7 @@ function keysAndValues(obj) {
         arr3[1] = arr2;
 	return arr3;
 }
-//https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
+//https://edabit.com/challenge/pPNAs5PvB3WvnDwDMz
 function toArray(obj) {
 	let arr3 = Object.entries(obj);
 	return arr3;
