@@ -296,15 +296,16 @@ function parityAnalysis(num) {
     }
 }
 
-//https://edabit.com/challenge/Rd7rkibLqAcBEx7xP   ne poly4ilos' polnostyu
+//https://edabit.com/challenge/Rd7rkibLqAcBEx7xP   ne poly4ilos' polnostyu( poly4ilos'!)
 function add(numberOne, numberTwo) {
-	if(typeof +numberOne === "number" && typeof +numberTwo === "number"){
-		let b = +numberOne + +numberTwo;
+	if(isNaN(parseInt(numberOne,10)) === true || isNaN(parseInt(numberTwo,10)) === true){
+		let str = "Invalid Operation";
+		return str;
+	}else {
+	
+		let b = parseInt(numberOne,10) + parseInt(numberTwo,10);
 		let c = String(b);
 		return c;
-	}else {
-		let str = "Invalid Operation";
-	return str;
 	}
 }
 
