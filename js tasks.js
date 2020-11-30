@@ -309,8 +309,7 @@ function add(numberOne, numberTwo) {
 	}
 }
 
-https://edabit.com/challenge/6nWnXZZBdetZSLbTE    ne poly4ilos' polnostyu
-
+//https://edabit.com/challenge/6nWnXZZBdetZSLbTE   
 function lettersOnly(str) {
 	if (str === ""){
 		return false;
@@ -381,4 +380,22 @@ function keysAndValues(obj) {
 function toArray(obj) {
 	let arr3 = Object.entries(obj);
 	return arr3;
+}
+
+//https://edabit.com/challenge/9CNJtMXaw2K5NwMLJ
+function convert(deg) {
+	if (deg.endsWith("C")){
+		let fareng = parseInt(deg,10)*9/5+32;
+		let  b = Math.round(fareng);
+		let farengeit = b + "°F"
+		return farengeit;
+	}else if(deg.endsWith("F")){
+		let celsium1 = (parseInt(deg,10)-32)*5/9;
+		let c = Math.round(celsium1);
+		let celsium = c + "°C";
+		
+		return celsium;
+	}else {
+		return "Error";
+	}
 }
