@@ -376,6 +376,22 @@ function keysAndValues(obj) {
         arr3[1] = arr2;
 	return arr3;
 }
+//2 variant 
+function keysAndValues(obj) {
+	let abc = [];
+	let abc1 = [];
+	let result = [];
+	for (let key in obj) {
+		abc.push(key);
+		abc1.push(obj[key])
+	}
+	
+	result[0] = abc;
+	result[1] = abc1;
+	return result;
+}
+
+
 //https://edabit.com/challenge/pPNAs5PvB3WvnDwDMz
 function toArray(obj) {
 	let arr3 = Object.entries(obj);
