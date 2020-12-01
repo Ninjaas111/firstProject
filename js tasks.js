@@ -308,6 +308,17 @@ function add(numberOne, numberTwo) {
 		return c;
 	}
 }
+//sorkawennui variant 
+function add(numberOne, numberTwo) {
+	let one = parseInt(numberOne,10);
+	let two = parseInt(numberTwo,10);
+	
+	if(isNaN(one) || isNaN(two)){
+		return "Invalid Operation" 
+	}
+	return String(one+two);
+}
+
 
 //https://edabit.com/challenge/6nWnXZZBdetZSLbTE   
 function lettersOnly(str) {
