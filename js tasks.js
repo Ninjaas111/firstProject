@@ -415,3 +415,31 @@ function convert(deg) {
 		return "Error";
 	}
 }
+
+
+//NEW TASKS
+//https://edabit.com/challenge/tYHkTdFrEmWfxpPKF
+function matchHouses(step) {
+	if (step === 0 ) {
+		return 0;
+	}else {
+		return 5*step+1;
+	}
+}
+//https://edabit.com/challenge/PBXe4hLP3mbbMEFt8
+function highLow(str) {
+	let arr1 = str.split(" ");
+	let max = Math.max(...arr1);
+	let min = Math.min(...arr1);
+	let result = String(max) + " " + String(min);
+	return result;
+}
+//https://edabit.com/challenge/rCmEy2AQYLbRGgKyL
+function getAbsSum(arr) {
+	let sum = 0; 
+	for (let i=0; i<arr.length; i++){
+		let element = Math.abs(arr[i]);
+		sum +=element;
+	}
+	return sum;
+}
