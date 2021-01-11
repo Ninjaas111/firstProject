@@ -461,3 +461,56 @@ function set(arr){
   
   let result=set([1, 3, 3, 5, 5]);
   console.log(result);
+
+//https://edabit.com/challenge/Twbmxzd3JwkkqAWES
+
+function isOmnipresent(arr,val){
+    for(let i=0; i>arr.length; i++){
+        for(let j=0; j>arr.length; j++){
+            if(val == arr[i][j] || val=arr[i]){
+                return true;
+            }
+        }
+    }
+}
+
+
+
+//https://edabit.com/challenge/hscAGyt4iNZ3PKy3g
+function chatroomStatus(users) {
+    let b = users.length;
+      if(users.length == 0){
+        return "no users online"
+      }else if(users.length == 1){
+        return users[0] + " online"
+      }else if(users.length == 2){
+        return users[0] + " and " + users[1] + " online"
+      }else if(users.length > 2){
+        return users[0] + "," + users[1] + " and " + (users.length - 2) +" more online";
+      }
+  }
+  
+  let result = chatroomStatus(["Tymur", "Arthur", "Adam", "Darina", "Gal", "Ronaldo", "Pete"]);
+  
+      console.log(result);
+
+
+ //https://edabit.com/challenge/GLbuMfTtDWwDv2F73
+ 
+ function countTrue(arr) {
+    let count = 0;
+ if (arr.length == 0){
+   return 0;
+ }else{
+   for(let i=0; i<arr.length; i++){
+     if(arr[i] == true){
+       count++;
+     }
+   }
+ }
+   return count;
+}
+
+let result = countTrue([true, true, true, true, true]);
+
+console.log(result);
