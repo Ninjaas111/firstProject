@@ -454,3 +454,10 @@ function getAbsSum(arr) {
 	}
 	return sum;
 }
+//https://edabit.com/challenge/Mo6Coy4PpTbZgtDKd
+function set(arr){
+    return Array.from(new Set(arr));
+  }
+  
+  let result=set([1, 3, 3, 5, 5]);
+  console.log(result);
