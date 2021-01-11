@@ -514,3 +514,21 @@ function chatroomStatus(users) {
 let result = countTrue([true, true, true, true, true]);
 
 console.log(result);
+
+//https://edabit.com/challenge/hD3euqPHM82Cbr7R8
+function largestSwap(num) {
+	let str=String(num);
+    let symbol1=str[1];
+    let symbol2=str[0];
+    let str2 = symbol1 + symbol2;
+    let reverseNumber = +str2;
+   if(num > reverseNumber || num == reverseNumber){
+     return true;
+   }else {
+     return false;
+   }
+}
+
+let result = largestSwap(21);
+
+console.log(result);
