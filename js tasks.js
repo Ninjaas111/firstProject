@@ -462,17 +462,55 @@ function set(arr){
   let result=set([1, 3, 3, 5, 5]);
   console.log(result);
 
+  //2 var
+
+  
+function isSet(arr){
+    let result=[];
+    for (let i = 0; i<arr.length; i++){
+      let hasElement = false;
+         for (let j=0; j<result.length; j++){
+           if (result[j]===arr[i]){
+             hasElement = true;
+             break;
+           }
+         }
+      if (hasElement ===false){
+        result.push(arr[i]);
+      }
+        
+    } 
+      return result;
+    }
+    
+    let next = isSet([1,3,3,4,4,5,5]);
+    console.log(next);
+    
+    
+
 //https://edabit.com/challenge/Twbmxzd3JwkkqAWES
 
 function isOmnipresent(arr,val){
-    for(let i=0; i>arr.length; i++){
-        for(let j=0; j>arr.length; j++){
-            if(val == arr[i][j] || val=arr[i]){
-                return true;
+    for(let i=0; i<arr.length; i++){
+        let hasValue = false;
+        for(let j=0; j<arr[i].length; j++){
+            if(val === arr[i][j]){
+                hasValue = true;
+                break;
             }
         }
+        if(hasValue===false){
+            return false;
+        }
+        
     }
+    return true;
+
 }
+
+
+let result = isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6);
+console.log(result);
 
 
 
