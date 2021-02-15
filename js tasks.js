@@ -584,3 +584,17 @@ return arr;
 }
 let result = arrayOfMultiples(7,5);
 console.log(result);
+
+
+//https://edabit.com/challenge/Gpy2qSFnfhGJnWMMj
+function canNest(arr1, arr2) {
+	for(let i = 0; i<arr1.length; i++){
+		for(let j = 0; j<arr2.length; j++){
+			if(Math.max(...arr1)<Math.max(...arr2) && Math.min(...arr1)>Math.min(...arr2)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+}
