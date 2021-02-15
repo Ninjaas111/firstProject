@@ -570,3 +570,17 @@ function largestSwap(num) {
 let result = largestSwap(21);
 
 console.log(result);
+
+
+//https://edabit.com/challenge/ebcd4Xu8TLizaj6dm  ne poly4ilas'
+function arrayOfMultiples (num, length) {
+    let arr = [];
+    arr.length = length;
+    arr[0] = num;
+        for(let i = 1; i<arr.length; i++){
+            arr[i] = num;
+}
+return arr;
+}
+let result = arrayOfMultiples(7,5);
+console.log(result);
