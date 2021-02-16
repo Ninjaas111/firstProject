@@ -598,3 +598,54 @@ function canNest(arr1, arr2) {
 		}
 	}
 }
+
+
+//https://edabit.com/challenge/hPWnaSckJke5FXNEH
+function timeForMilkAndCookies(date) {
+	if(date.getMonth()===11 && date.getDate()===24){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
+//https://edabit.com/challenge/rvsvGvqZ3BzNieKqA
+function detectWord(str) {
+	let lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	let arr=[];
+	for(let i=0; i<str.length;i++){
+		for(let j=0; j<lower.length;j++){
+			if(str[i]===lower[j]){
+				arr.push(str[i]);
+			}
+		}
+	}
+	let result = arr.join("");
+	return result;
+}
+
+//https://edabit.com/challenge/pB6CF3rFBi8ykJ3Br
+function shiftToLeft(x, y) {
+	return x*2**y;
+}
+//https://edabit.com/challenge/RGQXN4TG2CQoBAReQ
+function numberSquares(n) {
+	return (n**3)/3+(n**2)/2+(n/6)
+}
+//https://edabit.com/challenge/WCMC8X9z7758hq4gP
+function numLayers(n) {
+	let thicknessOfFolded = 0.0005*(2**n);
+	return thicknessOfFolded + "m";
+}
+
+//https://edabit.com/challenge/y9Rans4Ry5oW74cat
+function minMax(arr){
+    let arr2=[];
+    arr2.push(Math.min(...arr));
+    arr2.push(Math.max(...arr));
+    return arr2;
+  }
+  
+  let result = minMax([1]);
+  console.log(result);
