@@ -649,3 +649,31 @@ function minMax(arr){
   
   let result = minMax([1]);
   console.log(result);
+
+  //rekyrsiya
+
+  function sumTo(num){
+    if(num===1){
+      return num;
+    }else{
+      return num+sumTo(num-1);
+    }
+  }
+  
+  let result = sumTo(3);
+  console.log(result);
+
+//https://edabit.com/challenge/vsoQiYJXRANcYrX3Z
+  function ascDesNone(arr, str){
+    if (str==="Asc"){
+      return arr.sort(function(a,b){return a-b});
+    }else if(str==="Des"){
+      return arr.sort(function(a,b){return b-a});
+    }else{
+      return arr;
+    }
+  }
+  
+  
+  let result = ascDesNone([12, 2, 3, 4], "None");
+  console.log(result);
