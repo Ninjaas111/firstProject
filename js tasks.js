@@ -677,3 +677,29 @@ function minMax(arr){
   
   let result = ascDesNone([12, 2, 3, 4], "None");
   console.log(result);
+
+//https://edabit.com/challenge/jxxWvhfiv67P2zbTa
+  function lottery(ticket,win){
+    let count = 0;
+    for(let i =0; i<ticket.length; i++){
+        for(let j=0; j<ticket[i].length;j++){
+            let winner = ticket[i][1];
+            if(typeof ticket[i][j]==="string"){
+                    for(let k=0; k<ticket[i][j].length; k++){
+                        let winNumber = ticket[i][j].charCodeAt(k);
+                        if(winNumber === winner){
+                            count++;
+                        }
+                    }
+            }
+        }
+    }
+    if(count > win){
+        return "Winner!";
+    }else{
+        return "Loser!";
+    }
+}
+
+let result = lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 0);
+console.log(result);
