@@ -680,8 +680,10 @@ function minMax(arr){
 
 //https://edabit.com/challenge/jxxWvhfiv67P2zbTa
   function lottery(ticket,win){
-    let count = 0;
-    for(let i =0; i<ticket.length; i++){
+    
+
+
+
         for(let j=0; j<ticket[i].length;j++){
             let winner = ticket[i][1];
             if(typeof ticket[i][j]==="string"){
@@ -703,3 +705,134 @@ function minMax(arr){
 
 let result = lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 0);
 console.log(result);
+function lottery(ticket, win) {
+    let count = 0;
+    for (let i = 0; i < ticket.length; i++) {
+        let miniticket = ticket[i];
+        let word = miniticket[0];
+        let miniwin = miniticket[1];
+        for (let t = 0; t < word.length; t++) {
+            let charCode = word.charCodeAt(t);
+            if (charCode === miniwin) {
+                count++;
+                break;
+            }
+        }
+    }
+    if (count >= win) {
+        return "Winner!";
+    } else {
+        return "Loser!";
+    }
+}
+let result = lottery([["KG", 80], ["NTBBVZ", 79], ["CI", 73], ["AGXMEE", 74], ["IU", 68], ["VOSP" , 84]], 1)
+console.log(result);
+
+
+
+//https://edabit.com/challenge/ebcd4Xu8TLizaj6dm
+function arrayOfMultiples(num, length) {
+    let arr = [];
+    let startValue = 0;
+    for (let i = 0; i < length; i++) {
+        startValue += num;
+        arr.push(startValue);
+    }
+    return arr;
+}
+let result = arrayOfMultiples(12, 10);
+console.log(result);
+
+
+
+
+//https://edabit.com/challenge/Dq8kbbsLYyG9are5Z
+   
+function totalVolume(...boxes) {
+    let totalSum = 0;
+    let arr = [];
+
+    for (let i = 0; i < boxes.length; i++) {
+        let box = boxes[i];
+        let myltiply = box[0] * box[1] * box[2];
+        arr.push(myltiply);
+    }
+    for (let j = 0; j < arr.length; j++) {
+        totalSum += arr[j];
+    }
+    return totalSum;
+}
+
+let result = totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]);
+console.log(result);
+
+//https://edabit.com/challenge/3Efavz8YmSBia4p8s
+function indexMultiplier(arr){
+    let sum =0;
+    for(let i=0; i<arr.length; i++){
+       sum += arr[i]*i;
+    }
+    return sum;
+  }
+  
+  let result = indexMultiplier([-3, 0, 8, -6]);
+  console.log(result);
+
+//https://edabit.com/challenge/MXChCnzCSBobgY4Ex
+  function flatten(arr) {
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+      for(let j=0; j<arr[i].length;j++){
+        arr2.push(arr[i][j]);
+      }
+    }
+    return arr2; 
+  }
+  
+  let result=flatten([[1, 2], [3, 4]]);
+  console.log(result);
+
+//https://edabit.com/challenge/caeSeQ3K53GMQKenX
+  function getDistance(a,b){
+    let distance = Math.sqrt((b.x-a.x)**2+(b.y-a.y)**2);
+    return Math.round(distance*1000)/1000
+  }
+  
+  let result = getDistance({x: 0, y: 0}, {x: 1, y: 1});
+  console.log(result);
+
+//https://edabit.com/challenge/5Yt2CrYdrJvoJFHRt
+  function mapping(letters){
+    let objectLetters = {};
+    for(let i=0; i<letters.length; i++){
+        let b=letters[i];
+        let upper = b.toUpperCase();
+      objectLetters[b] = upper;
+    }
+    return objectLetters;
+  }
+  
+  
+  
+  
+  
+  let result = mapping(["p", "s"]);
+  console.log(result);
+
+  //https://edabit.com/challenge/YTECpnCCeJsYqYvfF
+  function invert(o){
+    let invertObject={};
+    for (let key in o ){
+      let property = key;
+      let valueProperty = o[key];
+      invertObject[valueProperty]=property;
+    }
+    return invertObject;
+  }
+  
+  
+  
+  
+  
+  let result = invert({ "z": "q", "w": "f" });
+  console.log(result);
