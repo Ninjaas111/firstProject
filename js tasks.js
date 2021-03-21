@@ -864,11 +864,12 @@ console.log(result);
 //https://edabit.com/challenge/ejfdLAp673DwxSg5R
 function areaOfCountry(country, area){
   let countryOfWorld=(area/148940000)*100;
-  let roundProportion=(countryOfWorld*100)/100;
+  let roundProportion=Math.round(countryOfWorld*100)/100;
   return country+ " is " + roundProportion + "% of the total world's landmass";
 }
 
 let result=areaOfCountry("Russia", 17098242);
+console.log(result);
 
 
 
@@ -891,6 +892,24 @@ function checkEquals(arr1, arr2){
 
 let result = checkEquals([4, 7, 6], [4, 5, 6]);
 console.log(result);
+
+function checkEquals(arr1, arr2){
+  if(arr1.length !== arr2.length){
+    return false;
+  }
+  
+  for(let i=0; i<arr1.length; i++){
+      if(arr1[i]!==arr2[i]){
+        return false;
+      }
+   
+  }
+  return true;
+}
+
+let result = checkEquals([4, 7, 8], [4, 7, 6]);
+console.log(result);
+
 
 
 //https://edabit.com/challenge/h87ArHxmQaaYGKD7m
@@ -945,25 +964,51 @@ console.log(result);
 
 //https://edabit.com/challenge/M6fbYyBkzJXMAu39G
 function compact(arr){
+  let arr2=[];
   for(let i=0; i<arr.length; i++){
     if(arr[i]===false){
-      arr.splice(i,1);
+      continue;
     }else if(arr[i]===null){
-      arr.splice(i,1);
+      continue;
     }else if(arr[i]===0){
-      arr.splice(i,1);
+      continue;
     }else if(arr[i]===""){
-      arr.splice(i,1);
+      continue;
     }else if(typeof arr[i]==="undefined"){
-      arr.splice(i,1);
+      continue;
     }else if(isNaN(arr[i])===true){
-      arr.splice(i,1);
+      continue;
     }
+    arr2.push(arr[i]);
   }
-  return arr;
+  return arr2;
 
 }
 
 
 let result = compact([0, 1, false, 2, "", 3, NaN, undefined, null]);
+console.log(result);
+
+
+
+
+function countAll(str){
+  let lettersCount=0;
+  let digitsCount=0;
+  let resultObject={};
+  for(let i=0; i<str.length; i++){
+    let numberStr= +str[i];
+    if(typeof numberStr==="number"){
+      digitsCount++;
+    }else{
+      lettersCount++;
+    }
+  }
+  resultObject.LETTERS=lettersCount;
+  resultObject.DIGITS=digitsCount;
+  return resultObject;
+}
+
+
+let result = countAll("Hello World");
 console.log(result);
