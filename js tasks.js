@@ -836,3 +836,134 @@ function indexMultiplier(arr){
   
   let result = invert({ "z": "q", "w": "f" });
   console.log(result);
+
+
+//https://edabit.com/challenge/M6fbYyBkzJXMAu39G
+  function compact(arr){
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]===false){
+       arr.pop(arr[i]);
+    }else if(arr[i]===null){
+      arr.pop(arr[i]);
+    }else if(arr[i]===0){
+      arr.pop(arr[i]);
+    }else if(arr[i]===""){
+      arr.pop(arr[i]);
+    }else if(arr[i]===undefined){
+      arr.pop(arr[i]);
+    }else if(arr[i]===NaN){
+      arr.pop(arr[i]);
+    }
+  }
+  return arr;
+}
+
+let result = compact([0, 1, false, 2, "", 3]);
+console.log(result);
+
+//https://edabit.com/challenge/ejfdLAp673DwxSg5R
+function areaOfCountry(country, area){
+  let countryOfWorld=(area/148940000)*100;
+  let roundProportion=(countryOfWorld*100)/100;
+  return country+ " is " + roundProportion + "% of the total world's landmass";
+}
+
+let result=areaOfCountry("Russia", 17098242);
+
+
+
+//https://edabit.com/challenge/3jZyJTfsXTXXwAQkA
+function checkEquals(arr1, arr2){
+  let count = 0;
+  for(let i=0; i<arr1.length; i++){
+    for(let j=0; j<arr2.length;j++){
+      if(arr1[i]===arr2[j]){
+        count++;
+      }
+    }
+  }
+  if(count === arr1.length){
+    return true;
+  }else {
+    return false;
+  }
+}
+
+let result = checkEquals([4, 7, 6], [4, 5, 6]);
+console.log(result);
+
+
+//https://edabit.com/challenge/h87ArHxmQaaYGKD7m
+function toObj(arr){
+  let finalObj={};
+  if (arr.length===0){
+    return arr;
+  }else{
+    for(let i=0; i<arr.length;i++){
+    finalObj[arr[i]] = arr[i].charCodeAt();
+  }
+  }
+  
+  for(let i=0; i<arr.length;i++){
+    finalObj[arr[i]] = arr[i].charCodeAt();
+  }
+  return finalObj;
+}
+
+
+let result = toObj(["a", "b", "c"]);
+console.log(result);
+
+//https://edabit.com/challenge/jRSST87NjECBzbwzL
+function getTotalPrice(groceries){
+  let price;
+  let totalPrice=[];
+  let sum=0;
+  for(let i=0; i<groceries.length; i++){
+    let grocery = groceries[i];
+     price = grocery.price*grocery.quantity;
+     totalPrice.push(price);
+  }
+  for(let j=0; j<totalPrice.length; j++){
+    sum +=totalPrice[j];
+  }
+  return sum;
+
+}
+
+
+let result = getTotalPrice([
+  { product: "Milk", quantity: 1, price: 1.50 },
+  { product: "Eggs", quantity: 12, price: 0.10 },
+  { product: "Bread", quantity: 2, price: 1.60 },
+  { product: "Cheese", quantity: 1, price: 4.50 }
+]);
+console.log(result);
+
+
+
+
+//https://edabit.com/challenge/M6fbYyBkzJXMAu39G
+function compact(arr){
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]===false){
+      arr.splice(i,1);
+    }else if(arr[i]===null){
+      arr.splice(i,1);
+    }else if(arr[i]===0){
+      arr.splice(i,1);
+    }else if(arr[i]===""){
+      arr.splice(i,1);
+    }else if(typeof arr[i]==="undefined"){
+      arr.splice(i,1);
+    }else if(isNaN(arr[i])===true){
+      arr.splice(i,1);
+    }
+  }
+  return arr;
+
+}
+
+
+let result = compact([0, 1, false, 2, "", 3, NaN, undefined, null]);
+console.log(result);
