@@ -917,15 +917,11 @@ function toObj(arr){
   let finalObj={};
   if (arr.length===0){
     return arr;
-  }else{
+  }
     for(let i=0; i<arr.length;i++){
     finalObj[arr[i]] = arr[i].charCodeAt();
   }
-  }
   
-  for(let i=0; i<arr.length;i++){
-    finalObj[arr[i]] = arr[i].charCodeAt();
-  }
   return finalObj;
 }
 
@@ -936,16 +932,13 @@ console.log(result);
 //https://edabit.com/challenge/jRSST87NjECBzbwzL
 function getTotalPrice(groceries){
   let price;
-  let totalPrice=[];
   let sum=0;
   for(let i=0; i<groceries.length; i++){
     let grocery = groceries[i];
      price = grocery.price*grocery.quantity;
-     totalPrice.push(price);
+    sum +=price;
   }
-  for(let j=0; j<totalPrice.length; j++){
-    sum +=totalPrice[j];
-  }
+  
   return sum;
 
 }
@@ -996,12 +989,13 @@ function countAll(str){
   let lettersCount=0;
   let digitsCount=0;
   let resultObject={};
-  for(let i=0; i<str.length; i++){
-    let numberStr= +str[i];
-    if(typeof numberStr==="number"){
-      digitsCount++;
-    }else{
+  let newStr=str.replace(/\s+/g, '');
+  for(let i=0; i<newStr.length; i++){
+    let numberType = Number(newStr[i]);
+    if(isNaN(numberType)===true){   
       lettersCount++;
+    }else {
+      digitsCount++;
     }
   }
   resultObject.LETTERS=lettersCount;
@@ -1010,5 +1004,47 @@ function countAll(str){
 }
 
 
-let result = countAll("Hello World");
+let result = countAll("H3ll0 Wor1d");
 console.log(result);
+
+
+
+//https://edabit.com/challenge/vPmDvWoP2wj5KpWZi
+function oldest(people){
+  let oldestHuman = null; 
+  for (key in people){
+    if(oldestHuman === null){
+      oldestHuman = key;
+    }else {
+       let age = people[key]; 
+      
+      let oldestHumanAge = people[oldestHuman];
+      if (age > oldestHumanAge){
+      oldestHuman = key;
+    }
+    }
+   
+  }
+  return oldestHuman;
+}
+let result = oldest({
+  Max: 9,
+  Josh: 13,
+  Sam: 48,
+  Anne: 33
+});
+console.log(result);
+
+
+// https://edabit.com/challenge/s5Sz2ovKsvtGxNGgn
+function Book(title, author){
+  this.title = title;
+  this.author = author;
+  this.getTitle = function(){return "Title: " + title};
+  this.getAuthor = function (){return "Author: " + author};
+}
+ let HP = new Book("Harry Potter", "J.K. Rowling");
+ console.log(HP.title);
+console.log(HP.author);
+console.log(HP.getTitle());
+console.log(HP.getAuthor());
