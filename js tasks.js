@@ -1048,3 +1048,15 @@ function Book(title, author){
 console.log(HP.author);
 console.log(HP.getTitle());
 console.log(HP.getAuthor());
+
+
+//https://edabit.com/challenge/hPWnaSckJke5FXNEH
+function timeForMilkAndCookies(date){
+  if(date.getMonth()===11 && date.getDate()===24){
+    return true;
+  }else{
+    return false;
+  }
+}
+let result = timeForMilkAndCookies(new Date(2013, 0, 23));
+console.log(result);
