@@ -1060,3 +1060,26 @@ function timeForMilkAndCookies(date){
 }
 let result = timeForMilkAndCookies(new Date(2013, 0, 23));
 console.log(result);
+
+
+//https://edabit.com/challenge/K8FPxyGNDXhWQD9jX
+function getDay(day){
+  let date = new Date(day);
+  let days=["Sunday","Monday","Tuesday","Wednesday","Thursday",
+           "Friday","Saturday"];
+  return days[date.getDay()];
+}
+let  result=getDay("12/08/2011");
+console.log(result);
+//https://jsbin.com/divicijala/edit?js,console,output
+function convertDate(date){
+  let dateC = new Date(date);
+  let month = dateC.getMonth();
+  let monthResult = month+1;
+  let day = dateC.getDay();
+  let year = dateC.getFullYear();
+  let dateConvert = [monthResult, dateC.getDay(), dateC.getFullYear()];
+  return dateConvert;
+}
+let result = convertDate("January 9, 2019");
+console.log(result);
