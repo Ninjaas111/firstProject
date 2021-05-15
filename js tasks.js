@@ -1083,3 +1083,44 @@ function convertDate(date){
 }
 let result = convertDate("January 9, 2019");
 console.log(result);
+
+//https://edabit.com/challenge/hxyvTffvdT4E238CY
+function testJackpot(result){
+  let countResults = 0;
+  for(let i=1; i<result.length; i++){
+    if (result[i]===result[0]){
+      countResults++
+    }
+  }
+  if(countResults === result.length-1){
+    return true;
+  } 
+  return false;
+}
+
+let test = testJackpot(["@", "@", "@", "@"]);
+let test2 = testJackpot(["&&", "&", "&&&", "&&&&"]);
+console.log(test);
+console.log(test2);
+
+
+//https://edabit.com/challenge/8n9RyHThC3dNEPCng
+function capToFront(s){
+  let arrUpper=[];
+  let arrLower=[];
+  for(let i=0; i<s.length; i++){
+    if(s[i].toUpperCase()===s[i]){
+      arrUpper.push(s[i]);
+    }else{
+      arrLower.push(s[i]);
+    }
+  }
+  let resultArray = arrUpper.concat(arrLower);
+  let capToFirstString = resultArray.join("");
+  return capToFirstString; 
+}
+
+let test = capToFront("hApPy");
+let test2 = capToFront("moveMENT");
+console.log(test);
+console.log(test2);
