@@ -1124,3 +1124,109 @@ let test = capToFront("hApPy");
 let test2 = capToFront("moveMENT");
 console.log(test);
 console.log(test2);
+
+//https://edabit.com/challenge/EMuszDzF66k9J73HG
+function jazzify(arr) {
+	for (let i=0; i<arr.length; i++){
+       let last = arr[i][arr[i].length-1]
+       if(last != "7" ){
+         arr[i] +=7;
+       }
+    }
+  return arr;
+}
+let result = jazzify(["F", "E", "A", "Ab", "Gm", "C"]);
+console.log(result);
+//https://jsbin.com/cikopofisu/edit?js,console,output
+function concat(...args){
+  let arr1=[];
+  
+  for(let i=0; i<args.length; i++){
+    for(let j=0; j<args[i].length; j++){
+      arr1.push(args[i][j]);
+    }
+  }
+  return arr1;
+}
+let result = concat([1], [2], [3], [4], [5], [6], [7]);
+let result2 = concat([1, 2, 3], [4, 5], [6, 7]);
+console.log(result);
+console.log(result2);
+
+//https://edabit.com/challenge/tmnCStcrkdWbreKP5
+function getBudgets(arr){
+  let sumOfBudgets = 0;
+  for(let i=0; i<arr.length; i++){
+    sumOfBudgets +=arr[i].budget;
+  }
+  return sumOfBudgets;
+}
+let result = getBudgets([
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+]);
+let result2 = getBudgets([
+  { name: "John",  age: 21, budget: 29000 },
+  { name: "Steve",  age: 32, budget: 32000 },
+  { name: "Martin",  age: 16, budget: 1600 }
+]);
+console.log(result);
+console.log(result2);
+//https://edabit.com/challenge/jbR9NupEL8zAZkbKx
+function matchLastItem(arr){
+  let matchItem = "";
+for(let i=0; i<arr.length-1; i++){
+  matchItem +=String(arr[i]);
+}
+let last = arr[arr.length-1];
+if(matchItem===last){
+  return true;
+}
+return false;
+
+}
+
+let result = matchLastItem(["rsq", "6hi", "g", "rsq6hig"]);
+let result2 = matchLastItem([1, 1, 1, "11"]);
+console.log(result);
+console.log(result2);
+
+//https://edabit.com/challenge/MarKs2qWR3cMHZjxy
+function timeToFinish(full, part){
+  let countFull=0;
+  let countPart=0;
+  for(let i=0; i<full.length; i++){
+    if(full[i] != " "){
+      countFull++;
+    }
+  }
+  for(let j=0; j<part.length; j++){
+    if(part[j] != " "){
+      countPart++;
+    }
+  }
+  let fullPartDifference = countFull - countPart;
+  let finishTime = fullPartDifference * 0.5;
+  return finishTime;
+}
+let result = timeToFinish( "As a result, my point is still valid.",
+  "As a result, my");
+console.log(result);
+
+//https://jsbin.com/mufazekita/edit?js,console,output
+function reverseAndNot(i){
+  let b = String(i);
+  let reverseStringArray = [];
+  for(let j=b.length - 1; j>=0; j--){
+    reverseStringArray.push(b[j]);
+  }
+  reverseStringArray.push(i);
+  let reverseString = reverseStringArray.join("");
+  let resultVersion = +reverseString;
+  return resultVersion;
+}
+let result = reverseAndNot(123);
+console.log(result);
+let result2 = reverseAndNot(123456789);
+console.log(result2);
