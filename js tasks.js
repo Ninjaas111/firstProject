@@ -1230,3 +1230,62 @@ let result = reverseAndNot(123);
 console.log(result);
 let result2 = reverseAndNot(123456789);
 console.log(result2);
+
+
+//https://edabit.com/challenge/3jzycf6fcgwZbvpcf
+function removeLeadingTrailing(n) {
+  let arr=[];
+  let arr2=[];
+  let leftNumberFound = false;
+	for(let i=0; i<n.length; i++){
+      if(n[i] != 0){
+        leftNumberFound = true;
+        arr.push(n[i]);
+      }else{
+        if(leftNumberFound){
+          arr.push(n[i]);
+        }
+      }
+    }
+    for(let j=arr.length-1; j>=0; j--){
+      if(arr[j]==="0"){
+        arr.pop(arr[j]);
+      }else if(arr[j] != "0"){
+        break;
+      }
+    }
+    let str=arr.join("");
+  
+  return str;
+}
+  let result = removeLeadingTrailing("00003.10400");
+console.log(result);
+
+//https://jsbin.com/qucitutugi/edit?js,console,output
+function clone(arr) {
+	let arr1 = []
+    for(let i=0; i<arr.length; i++){
+      arr1.push(arr[i]);
+    }
+    arr1.push(arr)
+	return arr1
+}
+let r = clone([1,1]);
+console.log(r);
+
+//https://edabit.com/challenge/FFdZPWBpBWvBjuGdr
+function iSqrt(n) {
+  if(n<0){
+    return "Invalid";
+  }
+let count = 0;
+  while(n>=2){
+    let b =Math.sqrt(n);
+    n = b;
+    count++;
+  }
+return count;
+}
+
+let result = iSqrt(256);
+console.log(result);
