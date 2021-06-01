@@ -1289,3 +1289,42 @@ return count;
 
 let result = iSqrt(256);
 console.log(result);
+
+//https://edabit.com/challenge/gA9dpoanWY6StiKR9
+function findOccurrences(str, char){
+  let arr = str.split(" ");
+  let obj = {};
+  let count = 0;
+  for(let i=0; i<arr.length; i++){
+    count = 0;
+    if(arr[i] in obj){
+      continue;
+    }
+    console.log(arr[i]);
+    for(let j=0; j<arr[i].length; j++){
+      let lowerCase = arr[i][j].toLowerCase();
+      if(lowerCase===char.toLowerCase()){
+        count++;
+      }
+      obj[arr[i].toLowerCase()] = count;
+    }
+  }
+  return obj;
+}
+let result = findOccurrences("an an taa", "A");
+console.log(result);
+
+//https://jsbin.com/fenefanipo/edit?js,console,output
+function sumArray(arr){
+  let sum=0;
+  let arr1=arr.flat(4);
+  for(let i=0; i<arr1.length; i++){
+    sum +=arr1[i];
+  }
+  return sum;
+}
+
+let result = sumArray([1, [2, [1]], 3]);
+console.log(result);
+let result2 = sumArray([1,2,3]);
+console.log(result2);
